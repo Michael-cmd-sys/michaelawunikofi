@@ -308,6 +308,9 @@
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
   }
+  .block {
+    display: block;
+  }
   .contents {
     display: contents;
   }
@@ -316,6 +319,12 @@
   }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline {
+    display: inline;
   }
   .inline-flex {
     display: inline-flex;

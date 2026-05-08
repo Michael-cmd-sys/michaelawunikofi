@@ -1,5 +1,5 @@
 [application]
-out_dir = "dist"
+out_dir = "docs"
 tailwind_input = "tailwind.css"
 tailwind_output = "assets/tailwind.css"
 

@@ -44,11 +44,11 @@
     width: calc(100% - 3rem);
     max-width: 66rem;
     margin: 2.5rem auto;
-    @apply rounded-[20px] bg-[var(--color-panel)] px-6 py-16 md:px-10 md:py-20;
+    @apply rounded-[20px] bg-panel px-6 py-16 md:px-10 md:py-20;
   }
 
   .section-kicker {
-    @apply mb-3 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-accent)];
+    @apply mb-3 inline-block text-xs font-semibold uppercase tracking-[0.15em] text-accent;
   }
 
   .section-heading {
@@ -56,11 +56,11 @@
   }
 
   .prose-lead {
-    @apply mb-8 text-center text-[1.1875rem] leading-8 font-medium text-[var(--color-ink)] md:mb-10 md:text-[1.25rem] md:leading-9;
+    @apply mb-8 text-center text-[1.1875rem] leading-8 font-medium text-ink md:mb-10 md:text-[1.25rem] md:leading-9;
   }
 
   .prose-body {
-    @apply text-center text-base leading-8 text-[var(--color-copy)];
+    @apply text-center text-base leading-8 text-copy;
   }
 
   .prose-body + .prose-body {
@@ -81,20 +81,20 @@
   }
 
   .project-pill {
-    @apply flex-grow rounded-full bg-amber-50 px-5 py-2.5 text-xs font-medium text-amber-800 text-center;
-  }
+    @apply grow rounded-full bg-amber-50 px-5 py-2.5 text-xs font-medium text-amber-800 text-center;
+  } 
 
   .skill-pill {
-    @apply flex-grow rounded-full bg-stone-100 px-5 py-2.5 text-sm font-medium text-stone-700 transition-all duration-200 hover:bg-amber-100 hover:text-amber-800;
+    @apply grow rounded-full bg-stone-100 px-5 py-2.5 text-sm font-medium text-stone-700 transition-all duration-200 hover:bg-amber-100 hover:text-amber-800;
   }
 
   .skill-category-card {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 10px 24px rgba(0, 0, 0, 0.025);
-    @apply flex h-full w-full max-w-[19rem] flex-col items-center rounded-[1.5rem] border border-stone-200/80 bg-white/75 px-5 py-7 text-center backdrop-blur-sm md:px-6 md:py-8;
+    @apply flex h-full w-full max-w-76 flex-col items-center rounded-3xl border border-stone-200/80 bg-white/75 px-5 py-7 text-center backdrop-blur-sm md:px-6 md:py-8;
   }
 
   .skill-pill-wrap {
-    @apply flex w-full max-w-[14rem] flex-wrap items-center justify-center gap-3.5;
+    @apply flex w-full max-w-56 flex-wrap items-center justify-center gap-3.5;
   }
 
   .contact-tile {

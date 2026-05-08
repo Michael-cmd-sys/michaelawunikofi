@@ -1,7 +1,6 @@
 use dioxus::prelude::*;
 use js_sys::wasm_bindgen::JsCast;
 use wasm_bindgen::prelude::*;
-use web_sys::{IntersectionObserver, IntersectionObserverEntry};
 
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
 
@@ -281,7 +280,7 @@ fn ProjectCard(project: Project, index: usize) -> Element {
 
 #[component]
 fn TechStack() -> Element {
-    let categories = vec![
+    let categories = [
         ("Mobile", vec!["React Native", "Flutter", "Expo"]),
         (
             "Backend",
