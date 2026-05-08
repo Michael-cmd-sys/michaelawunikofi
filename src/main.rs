@@ -105,20 +105,18 @@ fn Navbar() -> Element {
 fn ScrollReveal(class: String, children: Element) -> Element {
     let mut visible = use_signal(|| false);
     let id = use_hook(|| {
-        use std::time::{SystemTime, UNIX_EPOCH};
-        format!(
-            "scroll-reveal-{}",
-            SystemTime::now()
-                .duration_since(UNIX_EPOCH)
-                .unwrap()
-                .as_nanos()
-        )
+        let now = js_sys::Date::now();
+        format!("scroll-reveal-{}", now as u64)
     });
     let id_for_effect = id.clone();
 
     use_effect(move || {
-        let window = web_sys::window().unwrap();
-        let document = window.document().unwrap();
+        let Some(window) = web_sys::window() else {
+            return;
+        };
+        let Some(document) = window.document() else {
+            return;
+        };
 
         if let Some(element) = document.get_element_by_id(&id_for_effect) {
             let callback = Closure::wrap(Box::new(move |entries: js_sys::Array| {
