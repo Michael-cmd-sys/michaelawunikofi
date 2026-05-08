@@ -146,11 +146,7 @@ fn ScrollReveal(class: String, children: Element) -> Element {
     let class = class.clone();
     let id = id.clone();
     let is_visible = visible();
-    let animated_class = if is_visible {
-        "animate-fade-in-up"
-    } else {
-        "opacity-0"
-    };
+    let animated_class = if is_visible { "animate-fade-in-up" } else { "" };
 
     rsx! {
         div {
