@@ -364,14 +364,14 @@ fn Contact() -> Element {
                         span { "GitHub" }
                     }
                 }
-            }
-            p {
-                class: "text-sm text-gray-500",
-                "Or call me: "
-                a {
-                    href: "tel:+2332025029472",
-                    class: "text-amber-700 font-medium hover:underline",
-                    "+233 20 250 2947"
+                p {
+                    class: "text-sm text-gray-500",
+                    "Or call me: "
+                    a {
+                        href: "tel:+2332025029472",
+                        class: "text-amber-700 font-medium hover:underline",
+                        "+233 20 250 2947"
+                    }
                 }
             }
         }
